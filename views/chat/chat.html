@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatHolic-Messaging application</title>
+    <link rel="stylesheet" href="/styles/chat.css">
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+
+     <!-- toast notification -->
+     <section class="toast" id="toast">
+        <div class="toast-content" id="toast-content">
+          <i
+            class="fa fa-check-circle fa-2x"
+            aria-hidden="true"
+            style="color: green"
+          ></i>
+          <div class="message">
+            <span class="text text-1">Success</span>
+            <span class="text text-2">Your changes has been saved</span>
+          </div>
+        </div>
+      </section>
+      <!-- group -->
+      <section class="msger group" id="group-section" >
+        <header class="msger-header">
+          <form class="msger-inputarea" id="group-form">
+            <input
+              type="text"
+              class="msger-input"
+              placeholder="Create group..."
+              name="group"
+            />
+            <button type="submit" class="group-send-btn">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+          </form>
+        </header>
+        <main class="msger-chat" id="group" style="overflow-y: scroll; height: 29rem;">
+          <!-- <div class="group-name" id="group-name-btn">Group 1</div> -->
+        </main>
+      </section>
+      <!-- user -->
+      <section class="msger group" id="user-section"  style="display: none;">
+        <header class="msger-header">
+          <button type="submit" class="group-send-btn" id="back-btn">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <form class="msger-inputarea" id="user-form">
+            <input
+              type="email"
+              class="msger-input"
+              placeholder="Add user by email..."
+              name="user"
+            />
+            <button type="submit" class="group-send-btn" id="">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+          </form>
+        </header>
+        <main class="msger-chat" id="users">
+          <div class="group-name">name 1</div>
+        </main>
+      </section>
+      <!-- chat -->
+      <section class="msger" id="msg-section"  style="display: none;">
+        <header class="msger-header">
+          <div class="msger-header-title">
+            <i class="fa fa-comments-o" aria-hidden="true"></i> Group Chat
+          </div>
+          <button id="logout">Logout</button>
+        </header>
+        <main class="msger-chat" id="chat">
+          <!-- <div class="msg left-msg">
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">Harish</div>
+                <div class="msg-info-time">12:45</div>
+              </div>
+              <div class="msg-text">
+                Hi, welcome to ChatHolic ! Start now and send me a message. 😄
+              </div>
+            </div>
+          </div>
+  
+          <div class="msg right-msg">
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">Lokesh</div>
+                <div class="msg-info-time">12:46</div>
+              </div>
+  
+              <div class="msg-text">will go delhi</div>
+            </div>
+          </div> -->
+        </main>
+        <form class="msger-inputarea" id="msg-form">
+          <input
+            type="text"
+            class="msger-input"
+            placeholder="Enter your message..."
+            name="msg"
+          />
+          <button type="submit" class="msger-send-btn" id="">
+            <i class="fa fa-paper-plane-o fa-lg" aria-hidden="true"></i>
+          </button>
+        </form>
+      </section>
+
+
+    <script src="/scripts/toast.js"></script>
+    <script src="/scripts/chat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
